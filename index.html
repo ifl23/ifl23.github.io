@@ -1,647 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>IFL 2023</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-<meta name="description" content="35th Symposium on Implementation and Application of Functional Languages">
 
-  </head>
-  <body>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>IFL 2023</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+
+  <script src="js/jquery-3.2.1.min.js"></script> 
+
+  <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="js/plugins/total-custom.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+  <link rel='stylesheet' id='bxslider-css'  href='css/plugins/jquery.bxslider.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='owl-carousel-css'  href='css/plugins/owl.carousel.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='nivo-lightbox-css'  href='css/plugins/nivo-lightbox.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='superfish-css'  href='css/plugins/superfish.css' type='text/css' media='all' />
+
+
+  <script type='text/javascript' src='js/plugins/jquery.bxslider.js'></script>
+  <script type='text/javascript' src='js/plugins/owl.carousel.js'></script>
+  <script type='text/javascript' src='js/plugins/nivo-lightbox.js'></script>
+  <script type='text/javascript' src='js/plugins/superfish.js'></script>
+  <script type='text/javascript' src='js/plugins/waypoint.js'></script>
+  <script type='text/javascript' src='js/plugins/jquery.stellar.js'></script>
+  <script type='text/javascript' src='js/plugins/jquery.nav.js'></script>
+  <script type='text/javascript' src='js/plugins/jquery-migrate.min.js'></script>
+  <script type='text/javascript' src='js/plugins/frs.js'></script>
+  <script type='text/javascript' src='js/plugins/jquery.touchSwipe.min.js'></script>
+  <script type='text/javascript' src='js/plugins/imagesloaded.min.js'></script>
+  <script type='text/javascript' src='js/plugins/jquery.newstape.js'></script>
+  <script type='text/javascript' src='js/plugins/imagesloaded.min-3.js'></script>
+
+  <script type="text/javascript">
+    function openTab(tab) {
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+      var x = document.getElementsByClassName("nav-selector");
+      for (i = 0; i < x.length; i++) {
+        x[i].classList.remove("active");
+      }
+
+      var link = "nav-"+tab;
+      document.getElementById(link).classList.add("active");
+      document.getElementById(tab).style.display = "block";
+      
+    }
+  </script>
+
+  <script>
+    (function($){
+      $(window).load(function(){
+        /* initialize scrollbar */
+        $("#twitter-widget-holder").mCustomScrollbar({
+          theme:"dark-3",
+          scrollButtons:{enable:true}
+        });
+        /* insert twitter widget js in window load fn */
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      });
+    })(jQuery);
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113713203-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113713203-1');
+  </script>
+  -->
+
+  <script type="text/javascript">
+  	$( document ).ready(function() {
+
+      var today = new Date();
+
+      // Main Conference Dates
+      var dateAbstract = new Date(Date.UTC(2018,3,21, 11,59,59));
+      var datePaper = new Date(Date.UTC(2018,3,27, 11,59,59));
+      var dateReview = new Date(Date.UTC(2018,5,14, 11,59,59));
+      var dateRebuttal = new Date(Date.UTC(2018,5,22, 11,59,59));
+      var dateNotification = new Date(Date.UTC(2018,6,6, 11,59,59));
+      var dateCameraReady = new Date(Date.UTC(2018,6,30, 11,59,59));
+
+      var diffAbstract = Math.ceil((Math.abs(dateAbstract.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffPaper = Math.ceil((Math.abs(datePaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffReview = Math.ceil((Math.abs(dateReview.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffRebuttal = Math.ceil((Math.abs(dateRebuttal.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffNotification = Math.ceil((Math.abs(dateNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+      // Workshop Dates
+      // var dateWorkshopProposal = new Date("03/23/2018 23:59:59");
+      // var dateWorkshopNotification = new Date("04/06/2018 23:59:59");
+
+      // var diffWorkshopProposal = Math.ceil((Math.abs(dateWorkshopProposal.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      // var diffWorkshopNotification = Math.ceil((Math.abs(dateWorkshopNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+      // Showpieces Dates
+      var dateShowpieceSubmission = new Date(Date.UTC(2018,6,20, 11,59,59))
+      var dateShowpieceNotification = new Date(Date.UTC(2018,6,27, 11,59,59))
+      var dateShowpieceCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
+
+      var diffShowpieceSubmission = Math.ceil((Math.abs(dateShowpieceSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffShowpieceNotification = Math.ceil((Math.abs(dateShowpieceNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffShowpieceCameraReady = Math.ceil((Math.abs(dateShowpieceCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+
+      // Posters Dates
+      var datePostersSubmission = new Date(Date.UTC(2018,6,20, 11,59,59))
+      var datePostersNotification = new Date(Date.UTC(2018,6,27, 11,59,59))
+      var datePostersCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
+
+      var diffPostersSubmission = Math.ceil((Math.abs(datePostersSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffPostersNotification = Math.ceil((Math.abs(datePostersNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffPostersCameraReady = Math.ceil((Math.abs(datePostersCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+      // Graduate Consortium Dates
+      var dateConsortiumSubmission = new Date(Date.UTC(2018,6,27, 11,59,59))
+      var dateConsortiumNotification = new Date(Date.UTC(2018,7,6, 11,59,59))
+      var dateConsortiumCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
+
+      var diffConsortiumSubmission = Math.ceil((Math.abs(dateConsortiumSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffConsortiumNotification = Math.ceil((Math.abs(dateConsortiumNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffConsortiumCameraReady = Math.ceil((Math.abs(dateConsortiumCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+
+    });
+  	
+  </script>
+
+
+  <!-- <script src="https://s3-us-west-2.amazonaws.com/ieeeshutpages/gdpr/settings.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise(json)
+    });
+  </script> -->
+
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Navigation -->
+  <nav class="fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container" style="max-width: 1160px;">
+      <a class="navbar-brand" style="padding: 0px;" href="index.html"><img src="images/ifl23logo.png" style="width: 170px;"></a>
+        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="toggle-bar"><span></span></div>
+        <div class="ht-menu ht-clearfix navbar-collapse" style="display: none;" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto" style="display: block; text-align: center;">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="attending" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                IFL'23
+              </a>
+              <div class="dropdown-menu dropdown-menu-right menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="404.html">Keynotes</a>
+                <a class="dropdown-item" href="404.html">Sponsors</a>            
+              </div>
+            </li>
+            <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="404.html">
+                Registration
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="attending" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Attending
+              </a>
+              <div class="dropdown-menu dropdown-menu-right menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="404.html">Important Dates</a>
+                <!-- <a class="dropdown-item" href="404.html">Registration</a> -->
+                <a class="dropdown-item" href="404.html">Venue</a>
+                <a class="dropdown-item" href="404.html">Hotels</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="submitting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Calls
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="404.html">Call for Papers</a>
+                <a class="dropdown-item" href="404.html">Call for Workshops</a>
+                <a class="dropdown-item" href="404.html">Call for Sponsors</a>
+                <a class="dropdown-item" href="404.html">Call for Showpieces</a>
+                <a class="dropdown-item" href="404.html">Call for Posters</a>
+                <a class="dropdown-item" href="404.html">Graduate Consortium</a>
+
+                <a class="dropdown-item" href="404.html">Call for Nominations</a>
+              </div>
+            </li>
+            <!-- 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="attending" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Program
+              </a>
+              <div class="dropdown-menu dropdown-menu-right menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" aria-labelledby="navbarDropdownBlog">
+                
+                <a class="dropdown-item" href="404.html">Detailed Program</a>
+                <a class="dropdown-item" href="404.html">Accepted Papers</a>
+                <a class="dropdown-item" href="404.html">Accepted Showpieces</a>
+                <a class="dropdown-item" href="404.html">Accepted Posters</a>
+                <a class="dropdown-item" href="404.html">Accepted GC</a>
+
+              </div>
+            </li>
+ -->
+
+ <!--
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="attending" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Workshops
+              </a>
+              <div class="dropdown-menu dropdown-menu-right menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="404.html">Overview</a>
+                <a class="dropdown-item" target=_blank href="http://sems2018.ist.tugraz.at">SEMS'18</a>
+                <a class="dropdown-item" target=_blank href="https://www.cs.washington.edu/dtshps2018/">DTSHPS'18</a>
+              </div>
+            </li>
+
+  -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="padding-right: 1rem; padding-left: 1rem;" href="#" id="submitting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Organizers</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="404.html">Organizing Committee</a>
+                <a class="dropdown-item" href="404.html">Program Committee</a>
+              </div>
+
+<!--
+
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" target=_blank href="http://conferences.computer.org/VLHCC/">
+                Series Charter
+              </a>
+            </li>
+-->
+            <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="404.html">
+                Past IFLs
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <header>
-      <h1>The 35th Symposium on Implementation and Application of Functional Languages (IFL 2023)</h1>
+      <!-- <div style="margin-top: 35px; left: 70px; position: absolute; z-index: 1; color: white; text-shadow: 2px 1px rgba(0, 0, 0, 0.60);">
+        <h1 style="font-weight: bold;">VL/HCC 2018</h1>
+        <p style="font-style: italic; font-size: 25px;">IEEE Symposium on Visual Languages<br/>
+          and Human-Centric Computing<br/>
+          October 25-28, 2018 • Lisbon, Portugal</p>
+        </div> -->
+        <!-- <div class="watermark">
+          <p>© Turismo de Lisboa</p>
+        </div> -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
 
-      <nav>
-        <ul>
-	  <li><a href="#dates">Dates</a>
-	  <li><a href="#programme">Programme</a>
-	  <!-- <li><a href="#papers">Accepted papers</a> -->
-	  <li><a href="#submission">Submission</a>
-	  <li><a href="#venue">Venue</a>
-          <li><a href="#registration">Registration</a>
-          <li><a href="#organisation">Organisation</a>
-          <li><a href="#previous-events">Previous editions</a>
-          <li><a href="#sponsors">Sponsors</a>
-        </ul>
-      </nav>
+          </ol>
+          <!-- Royalty-free pictures taken from Pixabay -->
+          <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('images/lx1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Sanctuary of Our Lady of Sameiro</h4>
+                <!-- <p style="text-shadow: 1px 1px black; font-weight: 600;">Padrão dos Descobrimentos</p> -->
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx2.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Garden of Santa Barbara</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx3.jpg'); background-position: bottom;">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Sanctuary of Bom Jesus do Monte</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx4.jpg'); background-position: bottom;">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Letreiro de Braga</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx5.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Tourism Building in the Avenida da Liberdade</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">WIP</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">WIP</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">WIP</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/lx1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">WIP</h4>
+              </div>
+            </div>
+            
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </header>
 
-<!-- copyright-free images taken from pixabay -->
-      <div class="horizontal-images">
-        <img src="images/bom-jesus2-re.jpg" alt="Sanctuary of Bom Jesus do Monte"/>
-        <img src="images/santa-barbara-re.jpg" alt="Garden of Santa Barbara"/>
-        <img src="images/sameiro-re.jpg" alt="Sanctuary of Our Lady of Sameiro"/>
+      <!-- Page Content -->
+      <section class="section welcome p-justify">
+        <div class="container-fluid section-header">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <h1 class="my-4">Welcome to IFL 2023</h1>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-10">
+                  <h3 style="margin-top: 0px;">The 35th Symposium on Implementation and Application of Functional Languages <br/> day-day Month, 2023 • Braga, Portugal</h3>
+
+                  <!--
+                  <h4 class="mt-5 mb-5"><b>NOTE: The <a href="https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=8488603" target="_blank">Online Proceedings</a> are already available</b></h4>
+                  -->
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <!--
+                    From the beginning of the computer age, people have sought easier ways to learn, express, and understand computational ideas. Whether this meant moving from punch cards to textual languages, or command lines to graphical UIs, the quest to make computation easier to express, manipulate, and understand by a broader group of people is an ongoing challenge.
+                  -->
+                    <br/><br/>
+                    The <b>The 35th Symposium on Implementation and Application of Functional Languages</b> (IFL) is the premier international forum for research on this topic. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <!--
+                    Established in 1984, the mission of the conference is to support the design, theory, application, and evaluation of computing technologies and languages for programming, modeling, and communicating, which are easier to learn, use, and understand by people. We will hold the IEEE Symposium on Visual Languages and Human-Centric Computing in Lisbon, Portugal.
+                  -->
+                  </p>
+                  
+                  <!--<iframe width="60%" height="400" style="margin-top: 5px" src="https://www.youtube.com/embed/QtLnX6jLcHk?rel=0" frameborder="0" allowfullscreen></iframe>-->
+                  <!-- 
+                    braga https://youtu.be/t3iq1ZyH44A
+                  -->
+
+                  <div style="text-align: center;">
+                    <iframe width="100%" height="720" src="https://www.youtube.com/embed/t3iq1ZyH44A" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                    <div style="margin-right: 6px; margin-bottom: -35px; text-align: right; z-index: 1; color: white; text-shadow: 2px 1px rgba(0, 0, 0, 0.60);">
+                      <p>© Visit Braga</p>
+                    </div>
+                  </div>
+
+                  <div class="share">
+                    <div class="spacer"></div>
+                    <div class="fb-share-button" data-href="https://ifl23.github.io" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%ifl23.github.io&amp;src=sdkpreparse">
+                        Share
+                      </a>
+                    </div>
+
+                    <a class="twitter-share-button"
+                    href="https://twitter.com/intent/tweet?text=Prepare%20for%20#IFL 2023! @ifl23"
+                    data-url="https://ifl23.github.io"
+                    data-hashtags="ifl,ifl23"
+                    data-size="large">
+                  Tweet</a>
+                </div>
+                <div class="spacer"></div>
+                <!-- NEWS -->
+                <!--/ NEWS -->
+
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-3">
+            <div id="important-dates-feed" class="panel">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <nav class="nav nav-fill nav-pills">
+                    <a id="nav-upcoming-dates" class="nav-selector nav-item nav-link active" href="#!" onclick="openTab('upcoming-dates')">
+                      Upcoming Dates
+                    </a>
+                    <a id="nav-latest-news" class="nav-selector nav-item nav-link" href="#!" onclick="openTab('latest-news')">
+                      Latest News
+                    </a>
+                  </nav>
+                  
+                </div>
+              </div>
+              <div id="upcoming-dates" class="tab">
+                <div id="twitter-timeline-frame">
+                  <div class="list-group list-group-flush" style="margin-bottom: 0px;">
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
+                      <b>2023</b> 
+                      <span id="gc-submission-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="gc-submission-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">None yet - check back later!</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                      </blockquote>
+                    </a>
+
+                    <!-- <a href="#!" class="list-group-item list-group-item-hover">
+                      <b><s>27 July 2018</s></b> 
+                      <span id="gc-submission-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="gc-submission-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4"><s>Paper Submission</s></p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>GRADUATE CONSORTIUM</footer>
+                      </blockquote>
+                    </a>
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b><s>31 July 2018</s></b> 
+                      <span id="camera-ready-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4"><s>Camera Ready Copy</s></p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>MAIN CONFERENCE</footer>
+                      </blockquote>
+                    </a>
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b><s>6 August 2018</s></b> 
+                      <span id="gc-notification-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="gc-notification-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4"><s>Notification</s></p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>GRADUATE CONSORTIUM</footer>
+                      </blockquote>
+                    </a>
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b><s>10 August 2018</s></b>
+                      <span id="sp-camera-ready-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="sp-camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4"><s>Camera Ready Copy</s></p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>SHOWPIECES &nbsp&nbsp/&nbsp&nbsp POSTERS &nbsp&nbsp/&nbsp&nbsp GRADUATE CONSORTIUM</footer>
+                      </blockquote>
+                    </a>
+                     -->
+                  </div>
+
+                </div>
+              </div>
+              <div id="latest-news" style="display:none;" class="tab carousel slide carousel-multi-item" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                  <!--First slide-->
+                  <div class="carousel-item active" style="height: 100%; min-height: auto;">
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="IFL 23">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">No news yet - check back later!</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  2023</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">The webpage for IFL 23 is under construction and will be ready soon!</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="Graduate Consortium">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">VL/HCC Call for Posters</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  June. 25, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Prepare your posters. The VL/HCC 2018 call is now open. Click below for more info.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="Graduate Consortium">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">VL/HCC Graduate Consortium</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  June. 23, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">The Graduate Consortium call is now open! Start preparing your submission.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+                  -->
+
+                  </div>
+                  <!--/.First slide-->
+
+
+                  <!--Second slide-->
+                  <!--
+                  <div class="carousel-item" style="height: 100%; min-height: auto;">
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/sponsors/flad.png" alt="Outsystems">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">New Sponsor</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  May. 8, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">A new <i>Bronze Sponsor</i> is confirmed: <a href="https://www.flad.pt" target="_blank">FLAD</a>.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="Workshops">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">VL/HCC Workshops</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  Apr. 18, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">The accepted workshops were announced: <a href="http://sems2018.ist.tugraz.at/" target="_blank">SEMS'18</a> and <a href="https://www.cs.washington.edu/dtshps2018/" target="_blank">DTSHPS'18</a>. Prepare your submission!</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  -->
+                  <!--/.Second slide-->
+
+                  <!--Third slide-->
+                  <!--
+                  <div class="carousel-item" style="height: 100%; min-height: auto;">
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/hong.jpg" alt="Rodrigo">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">Keynote Speaker</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  Mar. 20, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text"><a href="http://www.cs.cmu.edu/~jasonh/" target="_blank">Jason Hong</a>, from <a href="" target="_blank">School of Computer Science</a>, at Carnegie Mellon University, is our 3rd confirmed keynote speaker.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/rodrigo_sc.jpg" alt="Rodrigo">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">Keynote Speaker</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  Mar. 12, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text"><a href="https://medium.com/@rodrigo_sc" target="_blank">Rodrigo Sousa Coutinho</a>, from <a href="https://www.outsystems.com" target="_blank">Outsystems</a>, is our second confirmed keynote speaker.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+            
+            -->
+            <!--/.Third slide-->
+            <!--Fourth slide-->
+            <!--
+              <div class="carousel-item" style="height: 100%; min-height: auto;">
+
+                <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/sponsors/outsystems.png" alt="Outsystems">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">First Sponsor</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  Mar. 2, 2018</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text"><a href="https://www.outsystems.com" target="_blank">Outsystems</a> is our first confirmed <i>Silver Sponsor</i>.</p>
+                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                <div class="col-sm-12 clearfix d-md-block">
+                  <div class="card mb-2 news-block">
+                    <div class="spacer"></div>
+                    <div class="col-sm-12">
+                      <span class="col-xs-3 nopadding">
+                        <img class="img-fluid img-circle" src="images/geraldine.jpeg" alt="Geraldine Fitzpatrick">
+                      </span>
+                      <span class="col-xs-9 nopadding">
+                        <b style="margin-left: 2%; vertical-align: top;">Keynote Speaker</b><br/>
+                        <i class="fa fa-calendar tiny" aria-hidden="true"><small>  Feb. 26, 2018</small></i>
+                      </span>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text"><a href="http://igw.tuwien.ac.at/hci/people/gfitzpatrick" target="_blank">Geraldine Fitzpatrick</a> is now confirmed as our first keynote speaker.</p>
+                      <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            -->
+            
+            <!--/.Fourth slide-->
+
+            <!--page change arrows-->
+            <!--
+          </div>
+          <div class="controls-top text-center">
+            <a class="btn-floating" href="#latest-news" data-slide="prev"><i class="text-dark fa fa-arrow-circle-o-left fa-2x"></i></a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn-floating" href="#latest-news" data-slide="next"><i class="text-dark fa fa-arrow-circle-o-right fa-2x"></i></a>
+          </div>
+        -->
+
+        </div>
       </div>
-
-    <div class="horizontal-images">
-      <strong>Sponsored by</strong>
-      <br>
-      <!-- what -kind- of sponsors are they? p.e. silver sponsor, bronze industrial, academic  -->
-      <a href="https://haslab.uminho.pt/"><img style="width:175px;" title="HASLab" src="logos/haslab.png" /></a>
-      <a href="https://www.inesctec.pt/en"><img style="width:175px;" title="INESC TEC" src="logos/inesctec.png" /></a>
-      <!-- <a href="https://www.meetup.com/MoedegruppeFunktionelleKoebenhavnere/"><img style="width:125px;" title="Fuktionelle Københavnere: Bronze industrial sponsor" src="logos/mfk.jpeg" /></a> -->
-      <a href="https://www.ku.dk/english/"><img style="width:175px;" title="University of Minho: Academic and legally responsible sponsor" src="logos/uminho.png" /></a>
+      <div class="spacer"></div>
+      <div id="twitter-feed-main" class="panel">
+        <div class="panel-heading clearfix">
+          <div class="panel-title">Twitter</div>
+        </div>
+        <div id="twitter-timeline-frame">
+          <a class="twitter-timeline" href="https://twitter.com/ifl23" data-height="400px" data-chrome="transparent" >Tweets by IFL</a> 
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
     </div>
-    </header>
+    <div id="twitter-ref" class="col-sm-3">
+      <div class="spacer"></div>
+      <i class="fa fa-3x fa-twitter-square" aria-hidden="true">   Tweets by ‎<a href="#">@ifl23</a></i>
+    </div>
+  </div>
+</div>
+<div class="section-line"></div>
+<!-- /.row -->
+</section>
+
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container" style="max-width: 1060px;">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 text-white">
+        <h4 style="font-weight: bold;">IFL 23</h4>
+        <div class="row">
+          <div class="col-sm-2">
+            <i class="fa fa-home"></i>
+          </div>
+          <div class="col-sm-12">
+            Universidade do Minho<br/>
+            Campus de Gualtar<br/>
+            4710-057 Braga<br/>
+          </div>
+        </div>
 
-    <section id="scope">
-      <h2><a href="#scope">Scope</a></h2>
-
-      The goal of IFL is to bring together researchers and developers
-      actively engaged in the implementation and application of
-      functional programming languages and function-oriented
-      programming. IFL 2023 is <a href="#venue">held in Braga, Portugal</a>
-      and is a venue for researchers to present and discuss new ideas
-      and concepts, work in progress, and publication-ripe results
-      related to the implementation and application of functional
-      programming languages and function-oriented programming.
-
-      See the <a href="tbd.txt">call for papers in text format</a> and the <a href="#topics">topics of interest</a>.
-    </section>
-
-    <section id="dates">
-      <h2><a href="#dates">Dates</a></h2>
-      <table>
-        <tbody><tr><td>Submission deadline of draft papers:</td><td>TBA</td></tr>
-          <tr><td>Notification of acceptance for presentation:</td><td>TBA</td></tr>
-	  <tr><td>Early registration deadline:</td><td>TBA</td></tr>
-	  <tr><td>Late registration deadline:</td><td>TBA</td></tr>
-          <tr><td>IFL Symposium:</td><td>TBA</td></tr>
-          <tr><td>Submission of papers for peer-reviewed proceedings:</td><td>TBA</td></tr>
-          <tr><td>Notification of acceptance:</td><td><b>TBA</b></td></tr>
-          <tr><td>Camera-ready version:</td><td>TBA</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="keynotes">
-      <h2><a href="#keynotes">Keynotes</a></h2>
-
-      TBD
-
-      <!-- We are pleased to announce the following keynote talks:
-
-      <h3 id="peter"><i>Keynote</i>: Abstract machines and functional language implementation</h3>
-      <span class="speaker-institution"><a href="http://www.itu.dk/people/sestoft/">Peter Sestoft, Professor, Head of Department</a>, <a href="https://en.itu.dk/">IT University of Copenhagen</a>.</span>
-
-      <img class="speaker-image" src="images/petersestoft.jpg" alt="Image of Peter Sestoft"/>
-
-      <p>
-      Machines for functional language implementation have a long
-history, starting with Landin's 1964 SECD machine. We review some
-historical developments for strict as well as lazy functional
-languages. For some time it was believed that functional language
-implementation required specialized hardware, but nowadays virtual
-machines ostensibly designed for object-oriented languages, notably
-the Java Virtual Machine and the .NET platform, have turned out to be
-excellent targets for (strict) functional languages also.
-
-      <p>
-      <span class="speaker">Speaker</span>: Peter Sestoft has worked
-      with functional programming, program manipulation and programming
-      language implementation for nearly four decades and since 2017 is head
-      the Computer Science Department at the IT University of
-Copenhagen. -->
-
-    </section>
-
-    <section id="programme">
-      <h2><a href="#programme">Programme</a></h2>
-
-      TBD
-
-<!--       <p>The format of the programme is as follows:</p>
-
-      <table>
-        <tbody><tr><td colspan="2"><span
-	  class='date-caption'>Wednesday, August 31st</span></td></tr>
-	    <tr><td>Location:</td><td>Thorvaldsensvej 40, Room A2-84-01</td></tr>
-	    <tr><td>08:30-08:55</td><td>Registration</td></tr>
-	    <tr><td>08:55-09:00</td><td>Welcome</td></tr>
-	    <tr><td valign='top' style='white-space:nowrap;'>09:00-10:00</td><td>Keynote (<i>Session chair: Fritz Henglein</i>)<br />
-		<ul>
-		  <li>
-		    <span class='talktitle'><a href="#peter"><i>Keynote</i>: Abstract machines and functional language implementation</a></span>.
- 	  	    <span class='talkauthors'>Peter Sestoft, Professor, Head of Department, IT University of Copenhagen</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-	    <tr><td>10:00-10:30</td><td>Break (Thorvaldsensvej 40,
-        Marmorhallen) </td></tr>
-	    <tr><td valign='top'>10:30-12:00</td><td>Session I (<i>Reversible computing &mdash; Session chair: Martin Elsman</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>Towards Inversion of Tail-recursive Term Rewriting Systems</span>.
- 	  	    <span class='talkauthors'>Maria Bendix Mikkelsen, Robert Glück and Maja Hanne Kirkeby</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Jeopardy: An invertible functional programming language</span>.
- 	  	    <span class='talkauthors'>Joachim Kristensen, Robin Kaarsgaard and Michael Kirkedal Thomsen</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Announcements</span>
-		  </li>
-                </ul>
-	    </td></tr>
-            <tr><td>12:00-13:30</td><td>Lunch  (Thorvaldsensvej 40,
-        Marmorhallen) </td></tr>
-            <tr><td valign='top'>13:30-15:00</td><td>Session II (<i>TYPES I &mdash; Session chair: Morten Rhiger</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>Heuristics-based Type Error Diagnosis for Haskell: the case of type families</span>.
- 	  	    <span class='talkauthors'>Niels Kwadijk and Jurriaan Hage</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Verified Technology Mapping in an Agda DSL for Circuit Design</span>.
- 	  	    <span class='talkauthors'>João Paulo Pizani Flor and Wouter Swierstra</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Verified Causal Broadcast with Liquid Haskell</span>.
- 	  	    <span class='talkauthors'>Patrick Redmond, Gan Shen, Niki Vazou and Lindsey Kuper</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-	    <tr><td>15:00-15:30</td><td>Break  (Thorvaldsensvej 40,
-        Marmorhallen)</td></tr>
-  	    <tr><td valign='top'>15:30-17:00</td><td>Session III (<i>Compilation &mdash; Session chair: Troels Henriksen</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>The Foil: Capture-Avoiding Substitution With No Sharp Edges</span>.
- 	  	    <span class='talkauthors'>Dougal Maclaurin, Alexey Radul and Adam Paszke</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>On Generating Out-Of-Core GPU Code for Multi-Dimensional Array Operations</span>.
- 	  	    <span class='talkauthors'>Patrick van Beurden and Sven-Bodo Scholz</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Compiling Haskell for Energy Efficiency: Analysis of Individual Transformations</span>.
- 	  	    <span class='talkauthors'>Bernardo Santos, João Fernandes, Maja Kirkeby and Alberto Pardo</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-            <tr><td>17:00-18:00</td><td>Welcome reception  (Thorvaldsensvej 40,
-        Marmorhallen)</td></tr>
-            <tr><td>18:00-xx:zz</td><td>Self-organized dinners</td></tr>
-      </tbody></table>
-
-      <table>
-        <tbody><tr><td colspan="2"><span
-	  class='date-caption'>Thursday, September 1st</span></td></tr>
-	    <tr><td>Location:</td><td>B&uuml;lowsvej 17, Festauditorium</td></tr>
-	    <tr><td valign='top' style='white-space:nowrap;'>09:00-10:00</td><td>Keynote (<i>Session chair: Martin Elsman</i>)<br />
-		<ul>
-		  <li>
-		    <span class='talktitle'><a href="#thomas"><i>Keynote</i>: MirageOS: using functional programming to reduce software complexity</a></span>.
- 	  	    <span class='talkauthors'>Thomas Gazagnaire, Chief Technology Officer and co-founder, Tarides</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-	    <tr><td>10:00-10:30</td><td>Break (i front of Festauditorium)</td></tr>
-  	    <tr><td valign='top'>10:30-12:00</td><td>Session IV (<i>Memory management &mdash; Session chair: Fritz Henglein</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>Compiling a functional array language with non-semantic memory information</span>.
- 	  	    <span class='talkauthors'>Philip Munksgaard, Cosmin Oancea and Troels Henriksen</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Strongly-Typed Multi-View Stack-Based Computations</span>.
- 	  	    <span class='talkauthors'>Pieter Koopman and Mart Lubbers</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Higher-ranked region inference for polymorphic, lazy languages</span>.
- 	  	    <span class='talkauthors'>Ivo Gabe de Wolff and Jurriaan Hage</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-            <tr><td>12:00-13:30</td><td>Lunch (in front of Festauditorium)</td></tr>
-            <tr><td valign='top'>13:30-14:30</td><td>Session V (<i>Editing and IFL Matters &mdash; Session chair: Jurriaan Hage</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>A Structure Editor with Type-Safe Copy/Paste</span>.
- 	  	    <span class='talkauthors'>Hans Hüttel, Christoffer Lind Andersen, Nana Gjerulf Sandberg, Anja Elisasen Lumholtz Nielsen and Peter Mikkelsen</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>IFL Matters</span>.
- 	  	    <span class='talkauthors'>Presentation and discussion moderated by chairs</span>.
-		  </li>
-		</ul>
-	      </td></tr>
-	    <tr><td>14:45-15:15</td><td>Transport in groups by bus and metro (30
-        min.), walking and metro (30 min.) or walking (50 min.) to
-        Ofelia Plads
-	    <tr><td>16:10-17:15</td><td>Social event: Canal tour of
-	      Copenhagen (with refreshments)</td></tr>
-	      <tr><td> </td><td>Departure: Ofelia Plads, harborside
-        boat landing ("Stromma kanalrundfart").  Arrival: Refshale&oslash;en</tr>
-            <tr><td>17:30-19:30</td><td>Social event: Dinner at Reffen
-        Street Food</td></tr>
-    </tbody></table>
-
-      <table>
-        <tbody><tr><td colspan="2"><span class='date-caption'>Friday,
-	  September 2nd</span></td></tr>
-	  <tr><td>Location:</td><td>B&uuml;lowsvej 17, Festauditorium</td></tr>
-	    <tr><td valign='top' style='white-space:nowrap;'>09:00-10:00</td><td>Session VI (<i>TYPES II &mdash; Session chair: Martin Elsman</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>First-Class Data Types in Shallow Embedded Domain-Specific Languages using Metaprogramming</span>.
- 	  	    <span class='talkauthors'>Mart Lubbers, Pieter Koopman and Rinus Plasmeijer</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Set-theoretic Types for Erlang</span>.
- 	  	    <span class='talkauthors'>Albert Schimpf, Stefan Wehr and Annette Bieniusa</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-	    <tr><td>10:00-10:30</td><td>Break (in front of Festauditorium)</td></tr>
-	    <tr><td valign='top'>10:30-12:00</td><td>Session VII (<i>Data transformation &mdash; Session chair: Pieter Koopman</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>How to fold and color a map: Comparing Use-Cases of Tree-Fold vs Fold-Left</span>.
- 	  	    <span class='talkauthors'>Jim Newton</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Systems of partial values and their applications in Haskell</span>.
- 	  	    <span class='talkauthors'>Natasha England-Elbro</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>Ztrategic: Strategic Programming with Zippers</span>.
- 	  	    <span class='talkauthors'>José Nuno Macedo, Emanuel Rodrigues, Marcos Viera and João Saraiva</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-            <tr><td>12:00-13:30</td><td>Lunch (at Cafe V&aelig;ksthus)</td></tr>
-            <tr><td valign='top'>13:30-14:30</td><td>Session VIII (<i>Data and analytics &mdash; Session chair: Troels Henriksen</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'>Asynchronous Shared Data Sources</span>.
- 	  	    <span class='talkauthors'>Mart Lubbers, Haye Böhm, Pieter Koopman and Rinus Plasmeijer</span>.
-		  </li>
-		  <li>
-		    <span class='talktitle'>An SQL Frontend on top of OCaml for Data Analysis</span>.
- 	  	    <span class='talkauthors'>Yan Dong, Yahui Song and Wei-Ngan Chin</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-	    <tr><td>14:30-15:00</td><td>Break (in front of
-        Festauditorium)</td></tr>
-	    <tr><td valign='top'>15:00-16:00</td><td>Industrial Keynote (<i>Session chair: Fritz Henglein</i>) <br />
-		<ul>
-		  <li>
-		    <span class='talktitle'><a href="#lennart"><i>Keynote</i>: Verse - a new functional-logic language</a></span>.
- 	  	    <span class='talkauthors'>Lennart Augustsson, Principal Programmer, Epic Games</span>.
-		  </li>
-		</ul>
-	    </td></tr>
-            <tr><td>16:00-17:00</td><td>Industrial Reception, good-bye</td></tr>
-        </tbody>
-      </table>
-      Notice that the programme is subject to minor changes. -->
-    </section>
-
-<!--     <section id="papers">
-      <h2><a href="#papers">Accepted Papers</a></h2>
-<ul class="accepted">
-<li><b>Asynchronous Shared Data Sources.</b> <i>Mart Lubbers, Haye Böhm, Pieter Koopman and Rinus Plasmeijer.</i> </li>
-<li><b>Heuristics-based Type Error Diagnosis for Haskell: the case of type families.</b> <i>Niels Kwadijk and Jurriaan Hage.</i> </li>
-<li><b>Verified Technology Mapping in an Agda DSL for Circuit Design.</b> <i>João Paulo Pizani Flor and Wouter Swierstra.</i> </li>
-<li><b>An SQL Frontend on top of OCaml for Data Analysis.</b> <i>Yan Dong, Yahui Song and Wei-Ngan Chin.</i> </li>
-<li><b>A Structure Editor with Type-Safe Copy/Paste.</b> <i>Hans Hüttel, Christoffer Lind Andersen, Nana Gjerulf Sandberg, Anja Elisasen Lumholtz Nielsen and Peter Mikkelsen.</i> </li>
-<li><b>How to fold and color a map: Comparing Use-Cases of Tree-Fold vs Fold-Left.</b> <i>Jim Newton.</i> </li>
-<li><b>Compiling a functional array language with non-semantic memory information.</b> <i>Philip Munksgaard, Cosmin Oancea and Troels Henriksen.</i> </li>
-<li><b>Systems of partial values and their applications in Haskell.</b> <i>Natasha England-Elbro.</i> </li>
-<li><b>First-Class Data Types in Shallow Embedded Domain-Specific Languages using Metaprogramming.</b> <i>Mart Lubbers, Pieter Koopman and Rinus Plasmeijer.</i> </li>
-<li><b>Set-theoretic Types for Erlang.</b> <i>Albert Schimpf, Stefan Wehr and Annette Bieniusa.</i> </li>
-<li><b>Strongly-Typed Multi-View Stack-Based Computations.</b> <i>Pieter Koopman and Mart Lubbers.</i> </li>
-<li><b>Ztrategic: Strategic Programming with Zippers.</b> <i>José Nuno Macedo, Emanuel Rodrigues, Marcos Viera and João Saraiva.</i> </li>
-<li><b>Higher-ranked region inference for polymorphic, lazy languages.</b> <i>Ivo Gabe de Wolff and Jurriaan Hage.</i> </li>
-<li><b>Jeopardy: An invertible functional programming language.</b> <i>Joachim Kristensen, Robin Kaarsgaard and Michael Kirkedal Thomsen.</i> </li>
-<li><b>The Foil: Capture-Avoiding Substitution With No Sharp Edges.</b> <i>Dougal Maclaurin, Alexey Radul and Adam Paszke.</i> </li>
-<li><b>Verified Causal Broadcast with Liquid Haskell.</b> <i>Patrick Redmond, Gan Shen, Niki Vazou and Lindsey Kuper.</i> </li>
-<li><b>Towards Inversion of Tail-recursive Term Rewriting Systems.</b> <i>Maria Bendix Mikkelsen, Robert Glück and Maja Hanne Kirkeby.</i> </li>
-<li><b>On Generating Out-Of-Core GPU Code for Multi-Dimensional Array Operations.</b> <i>Patrick van Beurden and Sven-Bodo Scholz.</i> </li>
-<li><b>Compiling Haskell for Energy Efficiency: Analysis of Individual Transformations.</b> <i>Bernardo Santos, João Fernandes, Maja Kirkeby and Alberto Pardo.</i> </li>
-</ul>
-    </section> -->
-
-    <section id="submission">
-      <h2><a href="#submission">Submission (post-reviewing)</a></h2>
-
-      <p>
-        All contributions must be written in English. Papers must use
-        the ACM two columns conference format, which can be found
-        <a href="http://www.acm.org/publications/proceedings-template">here</a>. (For <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
-        users, start your document with
-        <code>\documentclass[sigconf,screen,review]{acmart}</code>.) Note that
-        this format has a rather long but limited list of packages that
-        can be used. Please make sure that your document adheres to this
-        list.</p>
-
-      <p>
-	The page limit for papers is twelve pages (excluding references).</p>
-
-      <p>
-        <!-- Submission link for post-review papers: <a href="https://easychair.org/conferences/?conf=ifl2022postreview">EasyChair</a>. -->
-        Submission link for post-review papers: TBD.
-      </p>
-
-      <p>
-        Only papers that were presented at the IFL 2023 Symposium will be considered for publication.
-      </p>
-
-      <p>
-	<!-- The deadline for submission of post-reviewed papers is December 5, 2022 (AoE). -->
-      </p>
-
-    </section>
-
-    <section id="review">
-      <h2><a href="#review">Post-symposium peer-review</a></h2>
-
-      <p>
-        Following IFL tradition, IFL 2023 will use a post-symposium
-        review process to produce the formal proceedings.</p>
-
-      <p>
-        Before the symposium authors submit draft papers. These draft
-        papers will be screened by the program chair to make sure that
-        they are within the scope of IFL. The draft papers will be
-        made available to all participants at the symposium. Each
-        draft paper is presented by one of the authors at the
-        symposium. <em>Notice that it is a requirement that draft
-        papers that are accepted for presentation are presented
-        physically at the symposium.</em></p>
-
-      <p>
-        After the symposium every presenter is invited to submit a
-        full paper, incorporating feedback from discussions at the
-        symposium. Work submitted to IFL may not be simultaneously
-        submitted to other venues; submissions must adhere to ACM
-        SIGPLAN's republication policy. The program committee will
-        evaluate these submissions according to their correctness,
-        novelty, originality, relevance, significance, and clarity,
-        and will thereby determine whether the paper is accepted or
-        rejected for the formal proceedings. Papers that are accepted
-        for the formal proceedings are published in the International
-        Conference Proceedings Series of the ACM Digital Library, as
-        in previous years.</p>
-
-      <p>
-        Reviewing is single blind. There will be at least 3 reviews
-        per paper. The reviewers have 6 weeks to write their
-        reviews. For the camera-ready version the authors can make
-        minor revisions which are accepted without further reviewing.</p>
-    </section>
-
-    <section id="peter-landin-prize">
-      <h2><a href="#peter-landin-prize">Peter Landin prize</a></h2>
-
-      <p>The Peter Landin Prize is awarded to the best paper presented at
-      the symposium every year. The honored article is selected by the
-      program committee based on the submissions received for the
-      formal review process. The prize carries a cash award equivalent
-      to 150 Euros.</p>
-    </section>
-
-    <section id="topics">
-      <h2><a href="#topics">Topics of interest</a></h2>
-
-      <p>Topics of interest to IFL include, but are not limited to:</p>
-
-      <ul>
-        <li>language concepts
-        <li>type systems, type checking, type inferencing
-        <li>compilation techniques
-        <li>staged compilation
-        <li>run-time function specialisation
-        <li>run-time code generation
-        <li>partial evaluation
-        <li>(abstract) interpretation
-        <li>meta-programming
-        <li>generic programming
-        <li>automatic program generation
-        <li>array processing
-        <li>concurrent/parallel programming
-        <li>concurrent/parallel program execution
-        <li>embedded systems
-        <li>web applications
-        <li>(embedded) domain-specific languages
-        <li>security
-        <li>novel memory management techniques
-        <li>run-time profiling performance measurements
-        <li>debugging and tracing
-        <li>testing and proofing
-        <li>virtual/abstract machine architectures
-        <li>validation, verification of functional programs
-        <li>tools and programming techniques
-        <li>applications of functional programming in the industry, including
-          <ul>
-            <li>functional programming techniques for large applications
-            <li>successes of the application functional programming
-            <li>challenges for functional programming encountered
-            <li>any topic related to the application of functional programming that is interesting for the IFL community
-          </ul>
-      </ul>
-    </section>
-
-    <section id="venue">
-
-      <h2><a href="#venue">Venue</a></h2>
-
-
-      The symposium will be held physically on the Gualtar Campus of 
-      the School of Engineering at the University of Minho. More details
-      will be added at a later date. 
-<!--       <p>The symposium will be held physically on the Frederiksberg
-      Campus of the Faculty of Science at the University of
-      Copenhagen. Day 1 (August 31st) will be
-      in meeting room A2-84.01 at Thorvaldsensvej 40.  Days 2 and 3
-      (September 1st and 2nd) will be in the Celebration Auditorium (Festauditorium) at
-      B&#252;lowsvej 17; see the <a
-      href="https://www.google.com/maps/d/u/0/edit?mid=1zv-GsIvDjb9ZIdRbJUaJRfbLhEgNOGpC&usp=sharing">IFL
-      2022 map</a>.</p>
-
-      <p>Copenhagen is easy to get to by plane, train and bus.  See <a href="https://www.google.com/maps/d/u/0/edit?mid=1zv-GsIvDjb9ZIdRbJUaJRfbLhEgNOGpC&usp=sharing">IFL 2022 map of Copenhagen</a>.  For public transportation within Copenhagen by any combination of train,
-      rapid transit (S-tog), metro and bus, download the app "DOT Tickets", register a credit card, and buy a
-      2-zone ticket at the start each trip of one hour or less. (For the trip from/to the airport you need a 3-zone ticket.) Alternatively, walk, bike (e.g. via Donkey Republic, Bycyklen, Lime apps) or drive (parking is available at the venue; contact the IFL general chair).</p>
-
-      <p>
-      We have not made agreements with specific hotels since Copenhagen
-      is densely packed with hotels at various price levels, all
-      accessible by convenient and frequent public transport from and to the
-      venue.  For example <a href="https://www.wakeupcopenhagen.com/">WakeUp
-      Copenhagen</a> features small modern rooms, affordable
-      rates and has multiple locations in Copenhagen, including the
-      city center and near Copenhagen Airport. See Google, Hotels.com, Booking.com, AirBnB, TripAdvisor, Momondo, etc, for accommodation.
-      It is a good idea to check cancelation policies in case of last-minute changes such as COVID-19 measures or flight cancelations.</p>
-      <p>
-      Denmark presently has no entry or other restrictions due to COVID-19.
-      In particular, there are no limitations on sizes of gatherings;
-      wearing face masks is welcome, but is not required anywhere.  Health authorities are continuously monitoring Omicron variant infections.
-Since these have not led to increased hospitalization (yet), no restrictions have been contemplated (yet).
-The IFL 2022 organizers are carefully following the COVID-19 situation.
-In the unlikely event of a COVID-19-based imposition of travel or other restrictions in Denmark, IFL 2022 will be held in hybrid format.
-In such case, at the time of notification authors of accepted papers will be given the option to present their work remotely.</p> -->
-    </section>
-
-    <section id="registration">
-      <h2><a href="#registration">Registration</a></h2>
-
-      TBD
-<!-- 
-      <dl>
-	<dt>
-	  Registration fee:</dt>
-	  <dd>
-      <table>
-        <tbody><tr><td>Early registration, regular:</td><td>DKK 1600</td></tr>
-          <tr><td>Early registration, student:</td><td>DKK 1200</td></tr>
-	  <tr><td>Late registration, regular:</td><td>DKK 2000</td></tr>
-	  <tr><td>Late registration, student:</td><td>DKK 1600</td></tr>
-      </tbody>
-    </table>
-    All fees are including 25% Danish VAT.  Aproximate conversion rates: DKK 1000 ~ EUR 135 ~ USD 135 ~ GBP 115 ~ 18750 Yen.
-    <p>
-    The registration fee covers use of facilities, participation,
-    lunches, coffee breaks, receptions, social outing, symposium dinner and access to draft proceedings.
-    The student discount is made possible by the symposium's industrial sponsors.</dd>
-
-    <dt>Registration link:</dt>
-    <dd><a href="https://eventsignup.ku.dk/ifl2022">https://eventsignup.ku.dk/ifl2022</a></dd>
-
-  </dl>
-  Instructions: Please click on "Sign up" on the upper left of the
-  sign up page.  Choose "Standard" on the first sign-up page unless
-  you are a Ph.D., Master's or bachelor's student enrolled at an
-  accredited university.  You will
-  need to check the "Do you give us permission to record your presentation
-  and share the recording?" box.  Symposium dinner and outing (social
-  event) are included in the registration fee; so please check the corresponding
-  boxes.  If you know already now that you
-  cannot attend the social event or the symposium dinner, you can help
-  our planning by unchecking the corresponding
-  boxes.  (If you change your mind later on we'll do our best to
-  accommodate you.)  You will need to fill out "Dietary Restrictions?"
-  twice, on the 'Sign Up' page and on the 'Orderer' page that follows it.  If you have no dietary
-  restrictions, please write "None". If you know your university's EU
-  VAT number, fill it into the CVR field on the 'Orderer'
-  page; if not, don't worry about it.  (The VAT number may help your university
-  recover Danish VAT included in the registration fee.)    Finally
-  check all required boxes in the payment process and pay. You will get a
- registration confirmation and will subsequently get up-to-date
-  information about IFL 2022 by email. -->
-
-
-    </section>
-
-    <section id="organisation">
-      <h2><a href="#organisation">Organisation</a></h2>
-
-      TBD
-
-<!--       <dl>
-        <dt>General chair</dt>
-        <dd><a href="mailto:fritz@henglein.com">Fritz Henglein</a></dd>
-        <dt>Program chair</dt>
-	<dd><a href="https://elsman.com/">Martin Elsman</a></dd>
-	<dt>Communications chair</dt>
-	<dd><a href="mailto:athas@sigkill.dk">Troels Henriksen</a></dd>
-        <dt>Program commitee</dt>
-        <dd>
-          <ul>
-    <li>Laura M. Castro, Universidade da Coruña, Spain
-    <li>David Christiansen, Haskell Foundation
-    <li>Martin Elsman, University of Copenhagen, Denmark (chair)
-    <li>Matthew Fluet, Rochester Institute of Technology, USA
-    <li>Clemens Grelck, Universiteit van Amsterdam, The Netherlands
-    <li>Zhenjiang Hu, Peking University, China
-    <li>Robin Kaarsgaard, University of Edinburgh, Scotland
-    <li>Gabriele Keller, Utrecht University, The Netherlands
-    <li>Oleg Kiselyov, Tohoku University, Japan
-    <li>Neil Mitchell, Facebook
-    <li>Stefan Monnier, Universite de Montreal, Canada
-    <li>Magnus Myreen, Chalmers University, Sweden
-    <li>Cyrus Omar, University of Michigan, USA
-    <li>Romain Péchoux, University of Lorraine, Inria, France
-    <li>Rinus Plasmeijer, Radboud University, The Netherlands
-    <li>Morten Rhiger, Roskilde University, Denmark
-    <li>Peter van Roy, Catholic University of Louvain, Belgium
-    <li>Olin Shivers, Northeastern University, USA
-    <li>Peter Thiemann, University of Freiburg, Germany
-    <li>Marcos Viera, Universidad de la República, Uruguay
-    <li>Meng Wang, University of Bristol, UK
-    </ul>
-        </dd>
-      </dl> -->
-    </section>
-
-    <section id="previous-events">
-      <h2><a href="#previous-events">Previous editions of IFL</a></h2>
-
-      <ul>
-        <li><a href="https://ifl22.github.io/">2022</a>
-        <li><a href="https://ifl21.cs.ru.nl/HomePage">2021</a>
-        <li><a href="https://www.cs.kent.ac.uk/events/2020/ifl20/">2020</a>
-        <li><a href="https://web.archive.org/web/20201201105043/http://2019.iflconference.org/">2019 (from archive.org)</a>
-        <li><a href="https://web.archive.org/web/20201201105043/http://2018.iflconference.org/">2018 (from archive.org)</a>
-        <li><a href="https://web.archive.org/web/20201201105043/http://2017.iflconference.org/">2017 (from archive.org)</a>
-        <li><a href="https://dtai.cs.kuleuven.be/events/ifl2016/">2016</a>
-        <li><a href="http://ifl2015.wikidot.com/">2015</a>
-        <li><a href="http://ifl2014.github.io/">2014</a>
-        <li><a href="http://www.cs.ru.nl/P.Achten/IFL2013/IFL_2013_home.html">2013</a>
-        <li><a href="http://www.cs.ox.ac.uk/conferences/IFL2012/">2012</a>
-      </ul>
-    </section>
-
-    <section id="sponsors">
-      <h2><a href="#sponsors">Industrial sponsors</a></h2>
-
-      TBD
-
-      <!-- We are grateful for the financial support by Meta (silver),
-      Well-typed (bronze) and Functional Copenhageners (bronze).
-      Their contributions have made it possible to keep registration
-      fees below actual costs, in particular for students.
-
-      <p>Would you like to sponsor the industrial keynote and reception
-      Friday, 15-17 CET, to make it open and free to the public (up to the capacity of Celebration Auditorium)?
-
-      <p>We provide multiple options for you.
-
-      <dl>
-	<dt>Bronze (DKK 5000):</dt>
-	<dd>Your logo and link on the IFL 2022 website and in symposium materials; your roll-up or poster in the social space outside the symposium lecture room; one free registration (which can be donated to somebody else). Your sponsorship contributes to discounted student registration by partially covering on-site food and facility costs for students.</dd>
-
-	<dt>Silver (DKK 10000), industrial reception sponsor:</dt>
-	<dd>All of Bronze, plus: Named sponsor of industrial reception; with sponsor presentation (in lecture room or social space) at the beginning of the industrial reception.</dd>
-
-      </dl>
-     Please contact <a href="mailto:henglein@diku.dk">Fritz Henglein</a>. -->
-
-
-    </section>
-
-    <section id="acknowledgements">
-      <h2><a href="#acknowledgements">Acknowledgments</a></h2>
-
-      This call-for-papers is an adaptation and evolution of content
-      from previous instances of IFL. We are grateful to prior
-      organisers for their work, which is reused here.
-    </section>
-
-
-    <footer>
-      <div class="horizontal-images">
-	<img src="images/avenida.jpg" alt="Avenida da Liberdade"/>
-        <img src="images/turismo.jpg" alt="Tourism Building in the Avenida da Liberdade"/>
-        <img src="images/braga-sign.jpg" alt="Letreiro de Braga"/>
       </div>
 
-      <hr/>
+      <div class="col-md-2 col-sm-2 text-white">
+        <h4>Attending</h4>
+        <a href="404.html" class="text-white">Important Dates</a>
+        <a href="404.html" class="text-white">Registration</a>
 
-      &copy; Copyright 2023, <a href="https://www.di.uminho.pt/">School of Engineering, University of Minho</a>
-    </footer>
+        <br/>
+        <a href="404.html" class="text-white">Venue</a><br/>
+        <a href="404.html" class="text-white">Hotels</a>
+      </div>
+      <div class="col-md-2 col-sm-2 text-white">
+        <h4>Calls</h4>
+        <a href="404.html" class="text-white">Call for Papers</a><br/>
+        <a href="404.html" class="text-white">Call for Workshops</a><br/>
+         <a href="404.html" class="text-white">Call for Sponsors</a><br/>
+         <a href="404.html" class="text-white">Call for Showpieces</a><br/>
+         <a href="404.html" class="text-white">Call for Posters</a><br/>
+         <a href="404.html" class="text-white">Graduate Consortium</a><br/>
+         <a href="404.html" class="text-white">Call for Nominations</a><br/>
+      </div>
+      
+      <!-- <div class="col-md-2 col-sm-2 text-white">
+        <h4>Program</h4>
 
-  </body>
+        <a href="404.html" class="text-white">Overview</a><br/>
+        <a href="404.html" class="text-white">Detailed</a><br/>
+        <a href="404.html" class="text-white">Accepted Papers</a><br/>
+        <a href="404.html" class="text-white">Accepted Showpieces</a><br/>
+        <a href="404.html" class="text-white">Accepted Posters</a><br/>
+
+      </div>
+      
+      <div class="col-md-2 col-sm-2 text-white">
+        <a href="404.html" class="text-white"> <h4>Workshops</h4> </a>
+        <a href="http://sems2018.ist.tugraz.at/" target=_blank class="text-white">SEMS'18</a><br/>
+        <a href="https://www.cs.washington.edu/dtshps2018/" class="text-white">DTSHPS'18</a>
+      </div> -->
+      
+      <div class="col-md-2 col-sm-2 text-white">
+        <h4>Committees</h4>
+        <a href="404.html" class="text-white">Org. Committee</a><br/>
+        <a href="404.html" class="text-white">Prog. Committee</a>
+      </div>
+    </div>
+    <!--
+    <div class="row spacer">
+      <div class="col-sm-12 text-center">
+        <p class="m-0 text-center text-white">>  <a href="https://www.ieee.org/security-privacy.html" target="_blank" style="color: white; font-weight: bold;">IEEE Privacy Policy</a>  <</p>
+      </div>
+    </div>
+  -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
 
 </html>
