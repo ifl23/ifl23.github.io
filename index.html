@@ -97,54 +97,30 @@
       var today = new Date();
 
       // Main Conference Dates
-      var dateAbstract = new Date(Date.UTC(2018,3,21, 11,59,59));
-      var datePaper = new Date(Date.UTC(2018,3,27, 11,59,59));
-      var dateReview = new Date(Date.UTC(2018,5,14, 11,59,59));
-      var dateRebuttal = new Date(Date.UTC(2018,5,22, 11,59,59));
-      var dateNotification = new Date(Date.UTC(2018,6,6, 11,59,59));
-      var dateCameraReady = new Date(Date.UTC(2018,6,30, 11,59,59));
+      var dateDraftPaper = new Date(Date.UTC(2023,7,31, 11,59,59));
+      var dateAcceptPresent = new Date(Date.UTC(2023,8,1, 11,59,59));
+      var dateEarlyRegistration = new Date(Date.UTC(2023,8,11, 11,59,59));
+      var dateLateRegistration = new Date(Date.UTC(2023,8,23, 11,59,59));
+      var dateIFLSymposium = new Date(Date.UTC(2023,8,31, 11,59,59));
+      var dateSubmissionPaper = new Date(Date.UTC(2023,11,24, 11,59,59));
+      var dateAcceptPaper = new Date(Date.UTC(2024,2,2, 11,59,59));
+      var dateCameraReady = new Date(Date.UTC(2024,3,8, 11,59,59));
 
-      var diffAbstract = Math.ceil((Math.abs(dateAbstract.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffPaper = Math.ceil((Math.abs(datePaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffReview = Math.ceil((Math.abs(dateReview.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffRebuttal = Math.ceil((Math.abs(dateRebuttal.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffNotification = Math.ceil((Math.abs(dateNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffDraftPaper = Math.ceil((Math.abs(dateDraftPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffAcceptPresent = Math.ceil((Math.abs(dateAcceptPresent.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffEarlyRegistration = Math.ceil((Math.abs(dateEarlyRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffLateRegistration = Math.ceil((Math.abs(dateLateRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffIFLSymposium = Math.ceil((Math.abs(dateIFLSymposium.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffSubmissionPaper = Math.ceil((Math.abs(dateSubmissionPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffAcceptPaper = Math.ceil((Math.abs(dateAcceptPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
-      // Workshop Dates
-      // var dateWorkshopProposal = new Date("03/23/2018 23:59:59");
-      // var dateWorkshopNotification = new Date("04/06/2018 23:59:59");
+      
+      //$("#camera-ready-date-badge").text(diffCameraReady);
+      //if (diffCameraReady === "1 days left") {
+      //  $("#camera-ready-warning-badge").text("Today!");
+      //}
 
-      // var diffWorkshopProposal = Math.ceil((Math.abs(dateWorkshopProposal.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      // var diffWorkshopNotification = Math.ceil((Math.abs(dateWorkshopNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-
-      // Showpieces Dates
-      var dateShowpieceSubmission = new Date(Date.UTC(2018,6,20, 11,59,59))
-      var dateShowpieceNotification = new Date(Date.UTC(2018,6,27, 11,59,59))
-      var dateShowpieceCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
-
-      var diffShowpieceSubmission = Math.ceil((Math.abs(dateShowpieceSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffShowpieceNotification = Math.ceil((Math.abs(dateShowpieceNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffShowpieceCameraReady = Math.ceil((Math.abs(dateShowpieceCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-
-
-      // Posters Dates
-      var datePostersSubmission = new Date(Date.UTC(2018,6,20, 11,59,59))
-      var datePostersNotification = new Date(Date.UTC(2018,6,27, 11,59,59))
-      var datePostersCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
-
-      var diffPostersSubmission = Math.ceil((Math.abs(datePostersSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffPostersNotification = Math.ceil((Math.abs(datePostersNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffPostersCameraReady = Math.ceil((Math.abs(datePostersCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-
-      // Graduate Consortium Dates
-      var dateConsortiumSubmission = new Date(Date.UTC(2018,6,27, 11,59,59))
-      var dateConsortiumNotification = new Date(Date.UTC(2018,7,6, 11,59,59))
-      var dateConsortiumCameraReady = new Date(Date.UTC(2018,7,10, 11,59,59))
-
-      var diffConsortiumSubmission = Math.ceil((Math.abs(dateConsortiumSubmission.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffConsortiumNotification = Math.ceil((Math.abs(dateConsortiumNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
-      var diffConsortiumCameraReady = Math.ceil((Math.abs(dateConsortiumCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
     });
@@ -231,14 +207,20 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
 
           </ol>
           <!-- Royalty-free pictures taken from Pixabay -->
           <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('images/lx1.jpg');">
+            <div class="carousel-item active" style="background-image: url('images/lx4.jpg'); background-position: bottom;">
               <div class="carousel-caption d-none d-md-block">
-                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Sanctuary of Our Lady of Sameiro</h4>
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Letreiro de Braga</h4>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/porto1.jpg');">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Ponte D. Luís I</h4>
                 <!-- <p style="text-shadow: 1px 1px black; font-weight: 600;">Padrão dos Descobrimentos</p> -->
               </div>
             </div>
@@ -247,14 +229,15 @@
                 <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Garden of Santa Barbara</h4>
               </div>
             </div>
-            <div class="carousel-item" style="background-image: url('images/lx3.jpg'); background-position: bottom;">
+            <div class="carousel-item" style="background-image: url('images/viana1.jpg'); background-position: 50% 70%;">
               <div class="carousel-caption d-none d-md-block">
-                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Sanctuary of Bom Jesus do Monte</h4>
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Braga's Seaside (30Km)</h4>
+                <!-- <p style="text-shadow: 1px 1px black; font-weight: 600;">Padrão dos Descobrimentos</p> -->
               </div>
             </div>
-            <div class="carousel-item" style="background-image: url('images/lx4.jpg'); background-position: bottom;">
+            <div class="carousel-item" style="background-image: url('images/lx3.jpg'); background-position: bottom;">
               <div class="carousel-caption d-none d-md-block">
-                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Letreiro de Braga</h4>
+                <h4 style="text-shadow: 1px 1px black; font-weight: 600;">Sanctuary of Bom Jesus do Monte (UNESCO World Heritage)</h4>
               </div>
             </div>
             <div class="carousel-item" style="background-image: url('images/lx5.jpg');">
