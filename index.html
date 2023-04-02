@@ -116,12 +116,22 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
       
-      //$("#camera-ready-date-badge").text(diffCameraReady);
-      //if (diffCameraReady === "1 days left") {
-      //  $("#camera-ready-warning-badge").text("Today!");
-      //}
-
-
+      $("#dp-submission-date-badge").text(diffDraftPaper);
+      if (diffDraftPaper === "1 days left") {
+        $("#dp-submission-warning-badge").text("Today!");
+      }
+      $("#accept-presentation-date-badge").text(diffAcceptPresent);
+      if (diffAcceptPresent === "1 days left") {
+        $("#accept-presentation-warning-badge").text("Today!");
+      }
+      $("#early-registration-date-badge").text(diffEarlyRegistration);
+      if (diffEarlyRegistration === "1 days left") {
+        $("#early-registration-warning-badge").text("Today!");
+      }
+      $("#late-registration-date-badge").text(diffLateRegistration);
+      if (diffLateRegistration === "1 days left") {
+        $("#late-registration-warning-badge").text("Today!");
+      }
 
     });
   	
@@ -353,12 +363,60 @@
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <!--<b><s>30 November 2023</s></b>--> 
-                      <b>2023</b> 
-                      <span id="gc-submission-date-badge" class="badge badge-warning badge-pill">expired</span>
-                      <span id="gc-submission-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <b>31 July 2023</b> 
+                      <span id="dp-submission-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="dp-submission-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
                         <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
-                        <p class="h4">None yet - check back later!</p>
+                        <p class="h4">Draft Paper Submission Deadline</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
+                      <b>1 August 2023</b> 
+                      <span id="accept-presentation-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="accept-presentation-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">Notification of Acceptance for Presentation</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
+                      <b>11 August 2023</b> 
+                      <span id="early-registration-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="early-registration-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">Early Registration Deadline</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
+                      <b>23 August 2023</b> 
+                      <span id="late-registration-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="late-registration-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">Late Registration Deadline</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
