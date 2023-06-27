@@ -98,14 +98,16 @@
       var today = new Date();
 
       // Main Conference Dates
-      var dateDraftPaper = new Date(Date.UTC(2023,7,31, 11,59,59));
-      var dateAcceptPresent = new Date(Date.UTC(2023,8,1, 11,59,59));
-      var dateEarlyRegistration = new Date(Date.UTC(2023,8,11, 11,59,59));
-      var dateLateRegistration = new Date(Date.UTC(2023,8,23, 11,59,59));
-      var dateIFLSymposium = new Date(Date.UTC(2023,8,31, 11,59,59));
-      var dateSubmissionPaper = new Date(Date.UTC(2023,11,24, 11,59,59));
-      var dateAcceptPaper = new Date(Date.UTC(2024,2,2, 11,59,59));
-      var dateCameraReady = new Date(Date.UTC(2024,3,8, 11,59,59));
+      // JAVASCRIPT MOMENT - take care that the month is 0-indexed!!
+      //That is, month January is month 0 etc etc
+      var dateDraftPaper = new Date(Date.UTC(2023,6,31, 11,59,59));
+      var dateAcceptPresent = new Date(Date.UTC(2023,7,1, 11,59,59));
+      var dateEarlyRegistration = new Date(Date.UTC(2023,7,11, 11,59,59));
+      var dateLateRegistration = new Date(Date.UTC(2023,7,23, 11,59,59));
+      var dateIFLSymposium = new Date(Date.UTC(2023,7,31, 11,59,59));
+      var dateSubmissionPaper = new Date(Date.UTC(2023,10,24, 11,59,59));
+      var dateAcceptPaper = new Date(Date.UTC(2024,1,2, 11,59,59));
+      var dateCameraReady = new Date(Date.UTC(2024,2,8, 11,59,59));
 
       var diffDraftPaper = Math.ceil((Math.abs(dateDraftPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffAcceptPresent = Math.ceil((Math.abs(dateAcceptPresent.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
@@ -382,7 +384,7 @@
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
 
@@ -398,7 +400,7 @@
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
 
@@ -414,7 +416,7 @@
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
 
@@ -430,7 +432,7 @@
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <!-- <footer>GRADUATE CONSORTIUM</footer> -->
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
 
