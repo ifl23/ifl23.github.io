@@ -100,25 +100,41 @@
       // Main Conference Dates
       // JAVASCRIPT MOMENT - take care that the month is 0-indexed!!
       //That is, month January is month 0 etc etc
+      var dateWitsAbstractSub = new Date(Date.UTC(2023,6,15, 11,59,59));
+      var dateWitsNotification = new Date(Date.UTC(2023,6,28, 11,59,59));
       var dateDraftPaper = new Date(Date.UTC(2023,6,31, 11,59,59));
       var dateAcceptPresent = new Date(Date.UTC(2023,7,1, 11,59,59));
       var dateEarlyRegistration = new Date(Date.UTC(2023,7,11, 11,59,59));
       var dateLateRegistration = new Date(Date.UTC(2023,7,23, 11,59,59));
-      var dateIFLSymposium = new Date(Date.UTC(2023,7,31, 11,59,59));
+      var dateWitsWorkshop = new Date(Date.UTC(2023,7,28, 11,59,59));
+      var dateIFLSymposium = new Date(Date.UTC(2023,7,29, 11,59,59));
       var dateSubmissionPaper = new Date(Date.UTC(2023,10,24, 11,59,59));
       var dateAcceptPaper = new Date(Date.UTC(2024,1,2, 11,59,59));
       var dateCameraReady = new Date(Date.UTC(2024,2,8, 11,59,59));
 
+
+
+      var diffWitsAbstractSub = Math.ceil((Math.abs(dateWitsAbstractSub.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffWitsNotification = Math.ceil((Math.abs(dateWitsNotification.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffDraftPaper = Math.ceil((Math.abs(dateDraftPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffAcceptPresent = Math.ceil((Math.abs(dateAcceptPresent.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffEarlyRegistration = Math.ceil((Math.abs(dateEarlyRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffLateRegistration = Math.ceil((Math.abs(dateLateRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffWitsWorkshop = Math.ceil((Math.abs(dateWitsWorkshop.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffIFLSymposium = Math.ceil((Math.abs(dateIFLSymposium.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffSubmissionPaper = Math.ceil((Math.abs(dateSubmissionPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffAcceptPaper = Math.ceil((Math.abs(dateAcceptPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
-      
+
+      $("#wits-abstract-date-badge").text(diffWitsAbstractSub);
+      if (diffWitsAbstractSub === "1 days left") {
+        $("#wits-abstract-warning-badge").text("Today!");
+      }
+      $("#wits-notification-date-badge").text(diffWitsNotification);
+      if (diffWitsNotification === "1 days left") {
+        $("#wits-notification-warning-badge").text("Today!");
+      }
       $("#dp-submission-date-badge").text(diffDraftPaper);
       if (diffDraftPaper === "1 days left") {
         $("#dp-submission-warning-badge").text("Today!");
@@ -127,6 +143,7 @@
       if (diffAcceptPresent === "1 days left") {
         $("#accept-presentation-warning-badge").text("Today!");
       }
+      /*
       $("#early-registration-date-badge").text(diffEarlyRegistration);
       if (diffEarlyRegistration === "1 days left") {
         $("#early-registration-warning-badge").text("Today!");
@@ -135,6 +152,7 @@
       if (diffLateRegistration === "1 days left") {
         $("#late-registration-warning-badge").text("Today!");
       }
+      */
 
     });
   	
@@ -374,6 +392,38 @@
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <!--<b><s>30 November 2023</s></b>--> 
+                      <b>15 July 2023</b> 
+                      <span id="wits-abstract-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="wits-abstract-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">Abstract Submission Deadline</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>WITS23</footer>
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
+                      <b>28 July 2023</b> 
+                      <span id="wits-notification-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="wits-notification-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
+                        <p class="h4">Notification of Acceptance</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>WITS23</footer>
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <!--<b><s>30 November 2023</s></b>--> 
                       <b>31 July 2023</b> 
                       <span id="dp-submission-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="dp-submission-warning-badge" class="badge badge-danger badge-pill"></span>
@@ -404,13 +454,12 @@
                       </blockquote>
                     </a>
 
+                    <!--
                     <a href="#!" class="list-group-item list-group-item-hover">
-                      <!--<b><s>30 November 2023</s></b>--> 
                       <b>11 August 2023</b> 
                       <span id="early-registration-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="early-registration-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
-                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
                         <p class="h4">Early Registration Deadline</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
@@ -421,12 +470,10 @@
                     </a>
 
                     <a href="#!" class="list-group-item list-group-item-hover">
-                      <!--<b><s>30 November 2023</s></b>--> 
                       <b>23 August 2023</b> 
                       <span id="late-registration-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="late-registration-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
-                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
                         <p class="h4">Late Registration Deadline</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
@@ -435,6 +482,7 @@
                         <footer>IFL23</footer>
                       </blockquote>
                     </a>
+                  -->
 
                     <!-- <a href="#!" class="list-group-item list-group-item-hover">
                       <b><s>27 July 2018</s></b> 
@@ -505,35 +553,15 @@
                         <div class="spacer"></div>
                         <div class="col-sm-12">
                           <span class="col-xs-3 nopadding">
-                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="IFL 23">
-                          </span>
-                          <span class="col-xs-9 nopadding">
-                            <b style="margin-left: 2%; vertical-align: top;">No news yet - check back later!</b><br/>
-                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  2023</small></i>
-                          </span>
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">The webpage for IFL 23 is under construction and will be ready soon!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--
-                    <div class="col-sm-12 clearfix d-md-block">
-                      <div class="card mb-2 news-block">
-                        <div class="spacer"></div>
-                        <div class="col-sm-12">
-                          <span class="col-xs-3 nopadding">
                             <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="Graduate Consortium">
                           </span>
                           <span class="col-xs-9 nopadding">
-                            <b style="margin-left: 2%; vertical-align: top;">VL/HCC Call for Posters</b><br/>
-                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  June. 25, 2018</small></i>
+                            <b style="margin-left: 2%; vertical-align: top;">WITS2023</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  July 1, 2023</small></i>
                           </span>
                         </div>
                         <div class="card-body">
-                          <p class="card-text">Prepare your posters. The VL/HCC 2018 call is now open. Click below for more info.</p>
-                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                          <p class="card-text">WITS2023 will be co-located with IFL23! Be sure to check the extended deadlines and the call for papers <a href="call_papers_wits.html" target="_blank" rel="noopener noreferrer">here</a>.</p>
                         </div>
                       </div>
                     </div>
@@ -543,29 +571,52 @@
                         <div class="spacer"></div>
                         <div class="col-sm-12">
                           <span class="col-xs-3 nopadding">
-                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="Graduate Consortium">
+                            <img class="img-fluid img-circle" src="images/sponsors/welltyped.png" alt="IFL 23">
                           </span>
                           <span class="col-xs-9 nopadding">
-                            <b style="margin-left: 2%; vertical-align: top;">VL/HCC Graduate Consortium</b><br/>
-                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  June. 23, 2018</small></i>
+                            <b style="margin-left: 2%; vertical-align: top;">New Sponsor</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small> June 6, 2023</small></i>
                           </span>
                         </div>
                         <div class="card-body">
-                          <p class="card-text">The Graduate Consortium call is now open! Start preparing your submission.</p>
-                          <a href="404.html"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Info</i></a>
+                          <p class="card-text"><a href="https://well-typed.com/" target="_blank" rel="noopener noreferrer">Well-Typed</a> will be a Bronze Sponsor at IFL23! You can check the sponsors of the event in the following <a href="sponsors.html" target="_blank" rel="noopener noreferrer">link</a>.</p>
                         </div>
                       </div>
                     </div>
-                  -->
+                  
 
                   </div>
                   <!--/.First slide-->
 
 
                   <!--Second slide-->
-                  <!--
+                  
                   <div class="carousel-item" style="height: 100%; min-height: auto;">
 
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid img-circle" src="images/ifl23logo_square.png" alt="IFL 23">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 2%; vertical-align: top;">IFL23 will be held in Braga, Portugal</b><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  2023</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">The 2023 edition of the IFL symposium will be held in Braga, Portugal, August 29th - 31st. Please join us in spreading the word!</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                      </div>
+                    </div>
+
+                    <!--
                     <div class="col-sm-12 clearfix d-md-block">
                       <div class="card mb-2 news-block">
                         <div class="spacer"></div>
@@ -603,9 +654,10 @@
                         </div>
                       </div>
                     </div>
+                  -->
 
                   </div>
-                  -->
+                  
                   <!--/.Second slide-->
 
                   <!--Third slide-->
@@ -703,13 +755,12 @@
             <!--/.Fourth slide-->
 
             <!--page change arrows-->
-            <!--
-          </div>
           <div class="controls-top text-center">
             <a class="btn-floating" href="#latest-news" data-slide="prev"><i class="text-dark fa fa-arrow-circle-o-left fa-2x"></i></a>
             &nbsp;&nbsp;&nbsp;
             <a class="btn-floating" href="#latest-news" data-slide="next"><i class="text-dark fa fa-arrow-circle-o-right fa-2x"></i></a>
           </div>
+            <!--
         -->
 
           </div>
