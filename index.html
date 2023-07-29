@@ -127,10 +127,7 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
-      $("#wits-notification-date-badge").text(diffWitsNotification);
-      if (diffWitsNotification === "1 days left") {
-        $("#wits-notification-warning-badge").text("Today!");
-      }
+
       $("#dp-submission-date-badge").text(diffDraftPaper);
       if (diffDraftPaper === "1 days left") {
         $("#dp-submission-warning-badge").text("Today!");
@@ -139,17 +136,15 @@
       if (diffAcceptPresent === "1 days left") {
         $("#accept-presentation-warning-badge").text("Today!");
       }
-      
       $("#early-registration-date-badge").text(diffEarlyRegistration);
       if (diffEarlyRegistration === "1 days left") {
         $("#early-registration-warning-badge").text("Today!");
       }
-      /*
       $("#late-registration-date-badge").text(diffLateRegistration);
       if (diffLateRegistration === "1 days left") {
         $("#late-registration-warning-badge").text("Today!");
       }
-      */
+      
 
     });
   	
@@ -389,22 +384,6 @@
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <!--<b><s>30 November 2023</s></b>--> 
-                      <b>28 July 2023</b> 
-                      <span id="wits-notification-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="wits-notification-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
-                        <p class="h4">Notification of Acceptance</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>WITS23</footer>
-                      </blockquote>
-                    </a>
-
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <!--<b><s>30 November 2023</s></b>--> 
                       <b>31 July 2023</b> 
                       <span id="dp-submission-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="dp-submission-warning-badge" class="badge badge-danger badge-pill"></span>
@@ -450,7 +429,6 @@
                       </blockquote>
                     </a>
 
-                    <!--
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <b>23 August 2023</b> 
@@ -465,7 +443,7 @@
                         <footer>IFL23</footer>
                       </blockquote>
                     </a>
-                  -->
+
 
                     <!-- <a href="#!" class="list-group-item list-group-item-hover">
                       <b><s>27 July 2018</s></b> 
