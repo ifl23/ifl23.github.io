@@ -107,6 +107,7 @@
       var dateEarlyRegistration = new Date(Date.UTC(2023,7,11, 11,59,59));
       var dateLateRegistration = new Date(Date.UTC(2023,7,23, 11,59,59));
       var dateWitsWorkshop = new Date(Date.UTC(2023,7,28, 11,59,59));
+      var dateSusWorkshop = new Date(Date.UTC(2023,7,28, 11,59,59));
       var dateIFLSymposium = new Date(Date.UTC(2023,7,29, 11,59,59));
       var dateSubmissionPaper = new Date(Date.UTC(2023,10,24, 11,59,59));
       var dateAcceptPaper = new Date(Date.UTC(2024,1,2, 11,59,59));
@@ -121,6 +122,7 @@
       var diffEarlyRegistration = Math.ceil((Math.abs(dateEarlyRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffLateRegistration = Math.ceil((Math.abs(dateLateRegistration.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffWitsWorkshop = Math.ceil((Math.abs(dateWitsWorkshop.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffSusWorkshop = Math.ceil((Math.abs(dateSusWorkshop.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffIFLSymposium = Math.ceil((Math.abs(dateIFLSymposium.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffSubmissionPaper = Math.ceil((Math.abs(dateSubmissionPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
       var diffAcceptPaper = Math.ceil((Math.abs(dateAcceptPaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
@@ -143,6 +145,17 @@
       if (diffWitsWorkshop === "1 days left") {
         $("#wits-workshop-warning-badge").text("Today!");
       }
+      $("#sustrainable-date-badge").text(diffSusWorkshop);
+      if (diffSusWorkshop === "1 days left") {
+        $("#sustrainable-warning-badge").text("Today!");
+      }
+      /*
+      $("#ifl-symposium-date-badge").text(diffIFLSymposium);
+      if (diffIFLSymposium === "1 days left") {
+        $("#ifl-symposium-warning-badge").text("Today!");
+      }
+      */
+      
 
     });
   	
@@ -396,23 +409,6 @@
               <div id="upcoming-dates" class="tab">
                 <div id="twitter-timeline-frame">
                   <div class="list-group list-group-flush" style="margin-bottom: 0px;">
-
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <!--<b><s>30 November 2023</s></b>--> 
-                      <b>9 August 2023</b> 
-                      <span id="accept-presentation-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="accept-presentation-warning-badge" class="badge badge-danger badge-pill">Extended!</span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <!-- <p class="h4"><s>None yet - check back later!</s></p> -->
-                        <p class="h4">Notification of Acceptance for Presentation</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>IFL23</footer>
-                      </blockquote>
-                    </a>
-
                     
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <b>11 August 2023</b> 
@@ -454,6 +450,20 @@
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
                         <footer>WITS</footer>
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b>28 August 2023</b> 
+                      <span id="sustrainable-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="sustrainable-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4">SusTrainable Workshop</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>SusTrainable</footer>
                       </blockquote>
                     </a>
 
