@@ -130,14 +130,6 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
-      $("#accept-presentation-date-badge").text(diffAcceptPresent);
-      if (diffAcceptPresent === "1 days left") {
-        $("#accept-presentation-warning-badge").text("Today!");
-      }
-      $("#early-registration-date-badge").text(diffEarlyRegistration);
-      if (diffEarlyRegistration === "1 days left") {
-        $("#early-registration-warning-badge").text("Today!");
-      }
       $("#late-registration-date-badge").text(diffLateRegistration);
       if (diffLateRegistration === "1 days left") {
         $("#late-registration-warning-badge").text("Today!");
@@ -150,12 +142,11 @@
       if (diffSusWorkshop === "1 days left") {
         $("#sustrainable-warning-badge").text("Today!");
       }
-      /*
       $("#ifl-symposium-date-badge").text(diffIFLSymposium);
       if (diffIFLSymposium === "1 days left") {
         $("#ifl-symposium-warning-badge").text("Today!");
       }
-      */
+      
       
 
     });
@@ -410,21 +401,6 @@
               <div id="upcoming-dates" class="tab">
                 <div id="twitter-timeline-frame">
                   <div class="list-group list-group-flush" style="margin-bottom: 0px;">
-                    
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>11 August 2023</b> 
-                      <span id="early-registration-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="early-registration-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">Early Registration Deadline</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>IFL23</footer>
-                      </blockquote>
-                    </a>
-
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <b>23 August 2023</b> 
@@ -465,6 +441,20 @@
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
                         <footer>SusTrainable</footer>
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b>29 August 2023</b> 
+                      <span id="ifl-symposium-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="ifl-symposium-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4">IFL Symposium</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
 
