@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="images/icon/icon.ico">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IFL 2023</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <script src="js/jquery-3.2.1.min.js"></script> 
+
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/plugins/total-custom.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link rel='stylesheet' id='bxslider-css'  href='css/plugins/jquery.bxslider.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='owl-carousel-css'  href='css/plugins/owl.carousel.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nivo-lightbox-css'  href='css/plugins/nivo-lightbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='superfish-css'  href='css/plugins/superfish.css' type='text/css' media='all' />
+
+
+    <script type='text/javascript' src='js/plugins/jquery.bxslider.js'></script>
+    <script type='text/javascript' src='js/plugins/owl.carousel.js'></script>
+    <script type='text/javascript' src='js/plugins/nivo-lightbox.js'></script>
+    <script type='text/javascript' src='js/plugins/superfish.js'></script>
+    <script type='text/javascript' src='js/plugins/waypoint.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery.stellar.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery.nav.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/plugins/frs.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js/plugins/imagesloaded.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery.newstape.js'></script>
+    <script type='text/javascript' src='js/plugins/imagesloaded.min-3.js'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113713203-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113713203-1');
+    </script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/ieeeshutpages/gdpr/settings.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise(json)
+        });
+    </script>
+-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div id="navigation"></div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#navigation').load('navbar.html');
+    });
+  </script>
+
+<section class="section venue">
+    <!-- Page Content -->
+    <div class="container-fluid section-heading">
+
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Keynotes
+              <small></small>
+            </h1>
+
+            <ol class="breadcrumb">
+              <li class="">
+              </li>
+            </ol>
+
+            <div class="card mb-4" id="keynote-jose-pedro-magalhaes">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 text-center" style="padding-bottom: 25px;">
+                    <a href="https://dreixel.net/" target="_blank">
+                      <img class="img-fluid img-circle" style="width:100%;" src="images/keynotes/jpm.jpg" alt="">
+                    </a>
+                    <div style="display: inline-block; position:absolute; bottom:0;">
+                      <ul class="social-list">
+                        <li class="social-list-item">
+                          <a target="_blank" href="mailto:dreixel@gmail.com"><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li class="social-list-item">
+                          <a target="_blank" href="http://www.linkedin.com/in/josepedromagalhaes"><i class="fa fa-linkedin-square"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                  <div class="col-lg-9 p-justify">
+                    <h2 class="card-title">José Pedro Magalhães</h2>
+
+                    <h4>Functional Programming in Financial Markets</h4>
+                    <p class="card-text">In this talk we showcase the application of functional programming in a very large industrial setting. At Standard Chartered Bank, Haskell forms the core of a software library supporting the entire Financial Markets (FM), a business line with 5.7 billion USD operating income in 2022. Typed functional programming is used across the entire tech stack, including foundational APIs and CLIs for deal valuation and risk analysis, server-side components for long-running batches or sub-second RESTful services, and end-user GUIs. Thousands of users interact with software built using functional programming, and over one hundred write their own functional code. </p>
+                    <p class="card-text">We present the history of how functional programming established itself in FM, including the rationale for having our own compiler and dialect of Haskell. We then focus on how we leverage it to orchestrate type-driven large-scale pricing workflows. The same API can be used to price one trade locally, or millions of trades across thousands of nodes in the cloud. We build upon decades of research and experience in the functional programming community, relying on concepts such as monads, lenses, datatype generics, and closure serialisation. </p>
+
+                    <div class="spacer"></div> 
+                    <h5>About the Speaker</h5>
+                    <div class="small" style="color: grey;">
+                      <p class="card-text">José Pedro Magalhães is a Managing Director leading a team of ~45 quantitative developers at Standard Chartered Bank. He is also one of the founders of Chordify. </p>
+                      <p class="card-text">Before joining Standard Chartered, he was a postdoctoral research assistant in the Programming Languages group at the Department of Computer Science of the University of Oxford, working on the Unifying Theories of Generic Programming project. </p> 
+                      <p class="card-text">Previously he was a PhD student at the Department of Information and Computing Sciences of Utrecht University in the Netherlands. His PhD topic was Real-Life Datatype Generic Programming, supervised by Johan Jeuring, Andres Löh, and Doaitse Swierstra. Before that he graduated from Minho University in Computer Science and Systems Engineering (Licenciatura em Engenharia de Sistemas e Informática). </p>
+                      <p class="card-text">He has also been a Summer Student at CERN, an intern at Philips Research, and a research intern at Microsoft Research Cambridge. </p>
+
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4" id="keynote-rinus-plasmeijer">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 text-center" style="padding-bottom: 25px;">
+                    <a href="https://www.cs.ru.nl/~rinus/" target="_blank">
+                      <img class="img-fluid img-circle" style="width:100%;" src="images/keynotes/rp.jpg" alt="">
+                    </a>
+                    <div style="display: inline-block; position:absolute; bottom:0;">
+                      <ul class="social-list">
+                        <li class="social-list-item">
+                          <a target="_blank" href="mailto:rinus@cs.ru.nl"><i class="fa fa-envelope"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                  <div class="col-lg-9 p-justify">
+                    <h2 class="card-title">Rinus Plasmeijer</h2>
+
+                    <h4>Applying Task-Oriented Functional Programming for developing Real-world Multi-user Web-Applications</h4>
+                    <p class="card-text">The iTask library developed at the University of Nijmegen offers Task Oriented Programming (TOP) as an Embedded Domain Specific Language (EDSL) hosted in the pure functional language Clean. It is designed to support the development of distributed, multi-user, multi-platform, web applications. It allows programmers to focus on the different tasks and the dependencies between these tasks the application has to support. One does not need to worry too much about the technical details needed for the realization. From one source, the code, to be executed on the server, as well as the code to be executed on the browser, is generated. All data communication and synchronization between the parties involved is handled automatically by the iTask Operating System.</p>
+                    <p class="card-text">iTasks has successfully been used for developing industrial prototypes in different area’s. This has led in 2018 to a spin-off start-up company, TOP Software Technology (www.top-software.nl), which uses iTasks for the development of industrial applications. We focus on Command and Control Systems such as VIIA (Vessel Information Integrating Application). VIIA is a large and data demanding web-based multi-user application monitoring the world-wide movements of ship vessels over time. It is used by the Dutch Coast Guard to detect unwanted behaviours as soon as possible such that one has time to undertake proper actions.</p>
+                    <p class="card-text">In this talk we will give a short overview of VIIA to explain what the challenges are, and pinpoint to special features of Clean and iTasks used in the implementation.</p>
+
+                    <div class="spacer"></div> 
+                    <h5>About the Speaker</h5>
+                    <div class="small" style="color: grey;">
+                      <p class="card-text">Rinus Plasmeijer's main research interests are functional programming (in particular Clean), generic programming, graph re-writing systems, type systems, static analysis, compiler construction, code generation, men – machine interaction, parallel programming, distributed application development, operating systems, web-based systems, test systems, workflow systems, and internet programming. </p> 
+                      <p class="card-text">Currently Rinus applies advanced functional programming techniques to enable model driven software development. In particular Rinus uses these techniques for realizing Embedded Domain Specific Languages, using Clean as host language. A nice example of an EDSL is the iTask system, which is described in this keynote talk. </p>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Image Header -->
+        <div class="section-line"></div>
+  </section>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#footer').load('footer.html');
+    });
+  </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
