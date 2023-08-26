@@ -130,10 +130,6 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
-      $("#late-registration-date-badge").text(diffLateRegistration);
-      if (diffLateRegistration === "1 days left") {
-        $("#late-registration-warning-badge").text("Today!");
-      }
       $("#wits-workshop-date-badge").text(diffWitsWorkshop);
       if (diffWitsWorkshop === "1 days left") {
         $("#wits-workshop-warning-badge").text("Today!");
@@ -145,6 +141,10 @@
       $("#ifl-symposium-date-badge").text(diffIFLSymposium);
       if (diffIFLSymposium === "1 days left") {
         $("#ifl-symposium-warning-badge").text("Today!");
+      }
+      $("#submission-paper-date-badge").text(diffSubmissionPaper);
+      if (diffSubmissionPaper === "1 days left") {
+        $("#submission-paper-warning-badge").text("Today!");
       }
       
       
@@ -283,73 +283,8 @@
                     <b>The 35th Symposium on Implementation and Application of Functional Languages</b> (IFL23) is held in Braga, Portugal and is a venue for researchers to present and discuss new ideas and concepts, work in progress, and publication-ripe results related to the implementation and application of functional programming languages and function-oriented programming. See the call for papers in <a href="call_papers.html">this page</a> or in <a href="CallForPapers.txt" target="_blank" rel="noopener noreferrer">text format</a>.
                   </p>
                   <br>
-
-                  <h4><b>Registrations are OPEN! Do it <a href="https://hello.last2ticket.com/event/5162" target="_blank" rel="noopener noreferrer">here</a>.
-                  </b></h4>
-                  <h5>In the registration platform, click "Get Tickets" to see ticket options.</h5>
-                  All registration fees include lunch and welcome reception (28/8). The IFL registration includes also the social program/banquet (30/8). The registration fees are as following: 
-
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h3>STUDENT</h3>
-                      <table class="table table-striped table-responsive table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Event</th>
-                            <th class="text-center" scope="col">Early Registration</th>
-                            <th class="text-center" scope="col">Late Registration</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">IFL</th>
-                            <td class="text-center">170€</td>
-                            <td class="text-center">220€</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">WITS</th>
-                            <td class="text-center">40€</td>
-                            <td class="text-center">60€</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">IFL + WITS</th>
-                            <td class="text-center">210€</td>
-                            <td class="text-center">280€</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="col-sm-6">
-                      <h3>NON-STUDENT</h3>
-                      <table class="table table-striped table-responsive table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Event</th>
-                            <th class="text-center" scope="col">Early Registration</th>
-                            <th class="text-center" scope="col">Late Registration</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">IFL</th>
-                            <td class="text-center">220€</td>
-                            <td class="text-center">270€</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">WITS</th>
-                            <td class="text-center">50€</td>
-                            <td class="text-center">60€</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">IFL + WITS</th>
-                            <td class="text-center">270€</td>
-                            <td class="text-center">330€</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  
+                  <!-- <h4><b>Registrations have closed. Please contact the organizers if you have any questions regarding registrations.</b></h4>-->
+                                   
 
                   <div style="text-align: center;">
                     <iframe width="100%" height="720" src="https://www.youtube.com/embed/Jf2bX9fuUR8" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
@@ -403,20 +338,6 @@
                   <div class="list-group list-group-flush" style="margin-bottom: 0px;">
 
                     <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>23 August 2023</b> 
-                      <span id="late-registration-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="late-registration-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">Late Registration Deadline</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>IFL23</footer>
-                      </blockquote>
-                    </a>
-
-                    <a href="#!" class="list-group-item list-group-item-hover">
                       <b>28 August 2023</b> 
                       <span id="wits-workshop-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="wits-workshop-warning-badge" class="badge badge-danger badge-pill"></span>
@@ -450,6 +371,20 @@
                       <span id="ifl-symposium-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
                         <p class="h4">IFL Symposium</p>
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                        <footer>IFL23</footer>
+                      </blockquote>
+                    </a>
+
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b>24 November 2023</b> 
+                      <span id="submission-paper-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="submission-paper-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4">Submission of Papers for Proceedings</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
