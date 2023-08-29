@@ -130,21 +130,20 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
-      $("#wits-workshop-date-badge").text(diffWitsWorkshop);
-      if (diffWitsWorkshop === "1 days left") {
-        $("#wits-workshop-warning-badge").text("Today!");
-      }
-      $("#sustrainable-date-badge").text(diffSusWorkshop);
-      if (diffSusWorkshop === "1 days left") {
-        $("#sustrainable-warning-badge").text("Today!");
-      }
-      $("#ifl-symposium-date-badge").text(diffIFLSymposium);
-      if (diffIFLSymposium === "1 days left") {
-        $("#ifl-symposium-warning-badge").text("Today!");
-      }
+      $("#ifl-symposium-warning-badge").text("Today!");
+      
+
       $("#submission-paper-date-badge").text(diffSubmissionPaper);
       if (diffSubmissionPaper === "1 days left") {
         $("#submission-paper-warning-badge").text("Today!");
+      }
+      $("#accept-paper-date-badge").text(diffAcceptPaper);
+      if (diffSubmissionPaper === "1 days left") {
+        $("#accept-paper-warning-badge").text("Today!");
+      }
+      $("#camera-ready-date-badge").text(diffCameraReady);
+      if (diffSubmissionPaper === "1 days left") {
+        $("#camera-ready-warning-badge").text("Today!");
       }
       
       
@@ -337,36 +336,9 @@
                 <div id="twitter-timeline-frame">
                   <div class="list-group list-group-flush" style="margin-bottom: 0px;">
 
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>28 August 2023</b> 
-                      <span id="wits-workshop-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="wits-workshop-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">WITS Workshop</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>WITS</footer>
-                      </blockquote>
-                    </a>
 
                     <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>28 August 2023</b> 
-                      <span id="sustrainable-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="sustrainable-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">SusTrainable Workshop</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>SusTrainable</footer>
-                      </blockquote>
-                    </a>
-
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>29 August 2023</b> 
+                      <b>29-31 August 2023</b> 
                       <span id="ifl-symposium-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="ifl-symposium-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
@@ -394,59 +366,35 @@
                     </a>
 
 
-                    <!-- <a href="#!" class="list-group-item list-group-item-hover">
-                      <b><s>27 July 2018</s></b> 
-                      <span id="gc-submission-date-badge" class="badge badge-warning badge-pill">expired</span>
-                      <span id="gc-submission-warning-badge" class="badge badge-danger badge-pill"></span>
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b>2 February 2024</b> 
+                      <span id="accept-paper-date-badge" class="badge badge-warning badge-pill"></span>
+                      <span id="accept-paper-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
-                        <p class="h4"><s>Paper Submission</s></p>
+                        <p class="h4">Notification of Acceptance</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <footer>GRADUATE CONSORTIUM</footer>
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
+
+
                     <a href="#!" class="list-group-item list-group-item-hover">
-                      <b><s>31 July 2018</s></b> 
-                      <span id="camera-ready-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <b>8 March 2024</b> 
+                      <span id="camera-ready-date-badge" class="badge badge-warning badge-pill"></span>
                       <span id="camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
-                        <p class="h4"><s>Camera Ready Copy</s></p>
+                        <p class="h4">Camera-ready Version</p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
                         </div>
-                        <footer>MAIN CONFERENCE</footer>
+                        <footer>IFL23</footer>
                       </blockquote>
                     </a>
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b><s>6 August 2018</s></b> 
-                      <span id="gc-notification-date-badge" class="badge badge-warning badge-pill">expired</span>
-                      <span id="gc-notification-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4"><s>Notification</s></p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>GRADUATE CONSORTIUM</footer>
-                      </blockquote>
-                    </a>
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b><s>10 August 2018</s></b>
-                      <span id="sp-camera-ready-date-badge" class="badge badge-warning badge-pill">expired</span>
-                      <span id="sp-camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4"><s>Camera Ready Copy</s></p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                        <footer>SHOWPIECES &nbsp&nbsp/&nbsp&nbsp POSTERS &nbsp&nbsp/&nbsp&nbsp GRADUATE CONSORTIUM</footer>
-                      </blockquote>
-                    </a>
-                     -->
+
                   </div>
 
                 </div>
