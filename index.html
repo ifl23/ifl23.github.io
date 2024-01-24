@@ -130,10 +130,6 @@
       var diffCameraReady = Math.ceil((Math.abs(dateCameraReady.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
 
 
-      $("#submission-paper-date-badge").text(diffSubmissionPaper);
-      if (diffSubmissionPaper === "1 days left") {
-        $("#submission-paper-warning-badge").text("Today!");
-      }
       $("#accept-paper-date-badge").text(diffAcceptPaper);
       if (diffSubmissionPaper === "1 days left") {
         $("#accept-paper-warning-badge").text("Today!");
@@ -350,10 +346,10 @@
 
                     <a href="#!" class="list-group-item list-group-item-hover">
                       <b>1 December 2023</b> 
-                      <span id="submission-paper-date-badge" class="badge badge-warning badge-pill"></span>
-                      <span id="submission-paper-warning-badge" class="badge badge-danger badge-pill">Extended!</span>
+                      <span id="submission-paper-date-badge" class="badge badge-warning badge-pill">expired</span>
+                      <span id="submission-paper-warning-badge" class="badge badge-danger badge-pill"></span>
                       <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">Submission of Papers for Proceedings</p>
+                        <p class="h4"><s>Submission of Papers for Proceedings</s></p>
                         <div class="tool-tip badge badge-pill" style="float: right;">
                           <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
                           <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
